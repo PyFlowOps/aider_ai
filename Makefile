@@ -31,6 +31,10 @@ list-models: ##@repo Runs the Aider AI application
 	@./dev/.python/bin/python -m uv run aider --list-models openai/
 	@./dev/.python/bin/python -m uv run aider --list-models openllm/
 
+llama: ##@run Runs the Aider AI application - Gemini LLM
+	$(info ********** Running Llama Aider AI **********)
+	@./dev/.python/bin/python -m uv run aider --model ollama/llama3.2 --no-show-model-warnings
+
 gemini: ##@run Runs the Aider AI application - Gemini LLM
 	$(info ********** Running Gemini Aider AI **********)
 	@bash scripts/gemini.sh
